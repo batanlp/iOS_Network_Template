@@ -8,6 +8,11 @@
 
 import UIKit
 
-class EndpointType: NSObject {
-
+// Define all field of an API need
+protocol EndpointType {
+    var baseURL: URL { get }
+    var path: String { get }
+    var method: String { get }
+    var parameters: Dictionary<String, Any> { get }
+    var header_auth: String { get }
 }
